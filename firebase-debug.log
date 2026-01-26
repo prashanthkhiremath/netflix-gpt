@@ -1,0 +1,177 @@
+[debug] [2026-01-26T08:57:31.546Z] ----------------------------------------------------------------------
+[debug] [2026-01-26T08:57:31.548Z] Command:       C:\nvm4w\nodejs\node.exe C:\nvm4w\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2026-01-26T08:57:31.548Z] CLI Version:   15.4.0
+[debug] [2026-01-26T08:57:31.548Z] Platform:      win32
+[debug] [2026-01-26T08:57:31.548Z] Node Version:  v20.19.4
+[debug] [2026-01-26T08:57:31.549Z] Time:          Mon Jan 26 2026 14:27:31 GMT+0530 (India Standard Time)
+[debug] [2026-01-26T08:57:31.549Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-01-26T08:57:34.578Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-26T08:57:34.578Z] > authorizing via signed-in user (prashanthkhiremat@gmail.com)
+[debug] [2026-01-26T08:57:34.579Z] [iam] checking project netflixgpt-59bef for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-01-26T08:57:34.580Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:34.581Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:34.582Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-59bef:testIamPermissions [none]
+[debug] [2026-01-26T08:57:34.582Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-59bef:testIamPermissions x-goog-quota-user=projects/netflixgpt-59bef
+[debug] [2026-01-26T08:57:34.582Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-59bef:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-01-26T08:57:36.122Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-59bef:testIamPermissions 200
+[debug] [2026-01-26T08:57:36.122Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-59bef:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-01-26T08:57:36.122Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:36.122Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:36.123Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/netflixgpt-59bef [none]
+[debug] [2026-01-26T08:57:36.869Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/netflixgpt-59bef 200
+[debug] [2026-01-26T08:57:36.869Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/netflixgpt-59bef {"projectId":"netflixgpt-59bef","projectNumber":"1050999783555","displayName":"NetflixGPT","name":"projects/netflixgpt-59bef","resources":{"hostingSite":"netflixgpt-59bef"},"state":"ACTIVE","etag":"1_fe6c2845-9de3-4d92-9abb-ae75da8edcd2"}
+[info] 
+[info] === Deploying to 'netflixgpt-59bef'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2026-01-26T08:57:36.878Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:36.878Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:36.878Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflixgpt-59bef/versions [none]
+[debug] [2026-01-26T08:57:36.878Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflixgpt-59bef/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2026-01-26T08:57:39.505Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflixgpt-59bef/versions 200
+[debug] [2026-01-26T08:57:39.505Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflixgpt-59bef/versions {"name":"projects/1050999783555/sites/netflixgpt-59bef/versions/783025862a48f5a5","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[netflixgpt-59bef]: beginning deploy... 
+[info] i  hosting[netflixgpt-59bef]: found 14 files in build 
+[debug] [2026-01-26T08:57:39.520Z] [hosting] uploading with 200 concurrency
+[debug] [2026-01-26T08:57:39.521Z] [hosting] hash cache [YnVpbGQ] not populated
+[debug] [2026-01-26T08:57:39.686Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:39.686Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:39.691Z] [hosting] hash cache [YnVpbGQ] stored for 14 files
+[debug] [2026-01-26T08:57:39.691Z] [hosting][hash queue][FINAL] {"max":159,"min":14,"avg":26.357142857142858,"active":0,"complete":14,"success":14,"errored":0,"retried":0,"total":14,"elapsed":169}
+[debug] [2026-01-26T08:57:39.691Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/1050999783555/sites/netflixgpt-59bef/versions/783025862a48f5a5:populateFiles [none]
+[debug] [2026-01-26T08:57:39.691Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/1050999783555/sites/netflixgpt-59bef/versions/783025862a48f5a5:populateFiles {"files":{"/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/index.html":"116b2d46f90bdecbe0630b6f655804a4ae09658bd2ebf96f0ff9401136568ec9","/manifest.json":"ee04fb47e525c67d8424ffe9b4d8a8a24e434504478afca4e0ca602146836d4c","/logo512.png":"212b102aa09e51b3b3e06647e81f7801a61333e171f6582e8124379aabccb41d","/logo192.png":"79e2b749561016bc8af300ea19f48347ceed3cb1a54f48ae456172eca45e08f0","/static/js/main.282663f5.js.LICENSE.txt":"68d6680d426674d5a974e5319e25bcabbfcd4ba121bde7e3f3cff2d3c6f0c534","/favicon.ico":"27edce7be5922cf0bef7d4136f69b5bfbdd5bf8c13c7b026f71187d41a00aa7d","/asset-manifest.json":"d585570cd20d3a07c8ec3b26afcb3029c3ec477dbf95f7066337f3080baa7707","/static/js/453.499f0202.chunk.js":"dc68e3424db3af8dcd7e7a9dd5fe8cf5b3457eeffee6a8470a362e932c632a55","/static/css/main.4c1db2a4.css":"a69de00224a5fd16ef1785f557f9a316f2ce440d32ece8c6dfe59d775550df6c","/static/js/453.499f0202.chunk.js.map":"07fb57f5bd4b31f90149fbf2b920501769941bd84ff9bbffef60d9b8bc0c6b44","/static/css/main.4c1db2a4.css.map":"cb5f30471c643f874358f8ac0ac6403cf9c29ea2fc170565771f78870c0d70e5","/static/js/main.282663f5.js":"e39c14a496e91fb94d57486ae4089c7163e8272a520ac0b88b2c8dff47cf20ba","/static/js/main.282663f5.js.map":"e044e47efb2290de11524a318846873215f5bf0a82bcf1be569907705bf92387"}}
+[debug] [2026-01-26T08:57:40.078Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/1050999783555/sites/netflixgpt-59bef/versions/783025862a48f5a5:populateFiles 200
+[debug] [2026-01-26T08:57:40.078Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/1050999783555/sites/netflixgpt-59bef/versions/783025862a48f5a5:populateFiles {"uploadRequiredHashes":["e39c14a496e91fb94d57486ae4089c7163e8272a520ac0b88b2c8dff47cf20ba","a69de00224a5fd16ef1785f557f9a316f2ce440d32ece8c6dfe59d775550df6c","07fb57f5bd4b31f90149fbf2b920501769941bd84ff9bbffef60d9b8bc0c6b44","cb5f30471c643f874358f8ac0ac6403cf9c29ea2fc170565771f78870c0d70e5","bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","116b2d46f90bdecbe0630b6f655804a4ae09658bd2ebf96f0ff9401136568ec9","27edce7be5922cf0bef7d4136f69b5bfbdd5bf8c13c7b026f71187d41a00aa7d","d585570cd20d3a07c8ec3b26afcb3029c3ec477dbf95f7066337f3080baa7707","ee04fb47e525c67d8424ffe9b4d8a8a24e434504478afca4e0ca602146836d4c","212b102aa09e51b3b3e06647e81f7801a61333e171f6582e8124379aabccb41d","dc68e3424db3af8dcd7e7a9dd5fe8cf5b3457eeffee6a8470a362e932c632a55","e044e47efb2290de11524a318846873215f5bf0a82bcf1be569907705bf92387","79e2b749561016bc8af300ea19f48347ceed3cb1a54f48ae456172eca45e08f0","68d6680d426674d5a974e5319e25bcabbfcd4ba121bde7e3f3cff2d3c6f0c534"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files"}
+[debug] [2026-01-26T08:57:40.079Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:40.079Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:40.079Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:40.079Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:40.079Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:40.079Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:40.080Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:40.080Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:40.080Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:40.080Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:40.080Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:40.080Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:40.080Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:40.080Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:40.080Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:40.080Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:40.080Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:40.080Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:40.081Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:40.081Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:40.081Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:40.081Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:40.081Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:40.081Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:40.081Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:40.081Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:40.082Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:40.082Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:40.082Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/e39c14a496e91fb94d57486ae4089c7163e8272a520ac0b88b2c8dff47cf20ba [none]
+[debug] [2026-01-26T08:57:40.082Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/e39c14a496e91fb94d57486ae4089c7163e8272a520ac0b88b2c8dff47cf20ba [stream]
+[debug] [2026-01-26T08:57:40.083Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/a69de00224a5fd16ef1785f557f9a316f2ce440d32ece8c6dfe59d775550df6c [none]
+[debug] [2026-01-26T08:57:40.083Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/a69de00224a5fd16ef1785f557f9a316f2ce440d32ece8c6dfe59d775550df6c [stream]
+[debug] [2026-01-26T08:57:40.084Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/07fb57f5bd4b31f90149fbf2b920501769941bd84ff9bbffef60d9b8bc0c6b44 [none]
+[debug] [2026-01-26T08:57:40.084Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/07fb57f5bd4b31f90149fbf2b920501769941bd84ff9bbffef60d9b8bc0c6b44 [stream]
+[debug] [2026-01-26T08:57:40.085Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/cb5f30471c643f874358f8ac0ac6403cf9c29ea2fc170565771f78870c0d70e5 [none]
+[debug] [2026-01-26T08:57:40.085Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/cb5f30471c643f874358f8ac0ac6403cf9c29ea2fc170565771f78870c0d70e5 [stream]
+[debug] [2026-01-26T08:57:40.086Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49 [none]
+[debug] [2026-01-26T08:57:40.086Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49 [stream]
+[debug] [2026-01-26T08:57:40.087Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/116b2d46f90bdecbe0630b6f655804a4ae09658bd2ebf96f0ff9401136568ec9 [none]
+[debug] [2026-01-26T08:57:40.087Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/116b2d46f90bdecbe0630b6f655804a4ae09658bd2ebf96f0ff9401136568ec9 [stream]
+[debug] [2026-01-26T08:57:40.088Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/27edce7be5922cf0bef7d4136f69b5bfbdd5bf8c13c7b026f71187d41a00aa7d [none]
+[debug] [2026-01-26T08:57:40.088Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/27edce7be5922cf0bef7d4136f69b5bfbdd5bf8c13c7b026f71187d41a00aa7d [stream]
+[debug] [2026-01-26T08:57:40.089Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/d585570cd20d3a07c8ec3b26afcb3029c3ec477dbf95f7066337f3080baa7707 [none]
+[debug] [2026-01-26T08:57:40.089Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/d585570cd20d3a07c8ec3b26afcb3029c3ec477dbf95f7066337f3080baa7707 [stream]
+[debug] [2026-01-26T08:57:40.090Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/ee04fb47e525c67d8424ffe9b4d8a8a24e434504478afca4e0ca602146836d4c [none]
+[debug] [2026-01-26T08:57:40.090Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/ee04fb47e525c67d8424ffe9b4d8a8a24e434504478afca4e0ca602146836d4c [stream]
+[debug] [2026-01-26T08:57:40.091Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/212b102aa09e51b3b3e06647e81f7801a61333e171f6582e8124379aabccb41d [none]
+[debug] [2026-01-26T08:57:40.091Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/212b102aa09e51b3b3e06647e81f7801a61333e171f6582e8124379aabccb41d [stream]
+[debug] [2026-01-26T08:57:40.091Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/dc68e3424db3af8dcd7e7a9dd5fe8cf5b3457eeffee6a8470a362e932c632a55 [none]
+[debug] [2026-01-26T08:57:40.092Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/dc68e3424db3af8dcd7e7a9dd5fe8cf5b3457eeffee6a8470a362e932c632a55 [stream]
+[debug] [2026-01-26T08:57:40.093Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/e044e47efb2290de11524a318846873215f5bf0a82bcf1be569907705bf92387 [none]
+[debug] [2026-01-26T08:57:40.093Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/e044e47efb2290de11524a318846873215f5bf0a82bcf1be569907705bf92387 [stream]
+[debug] [2026-01-26T08:57:40.094Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/79e2b749561016bc8af300ea19f48347ceed3cb1a54f48ae456172eca45e08f0 [none]
+[debug] [2026-01-26T08:57:40.094Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/79e2b749561016bc8af300ea19f48347ceed3cb1a54f48ae456172eca45e08f0 [stream]
+[debug] [2026-01-26T08:57:40.095Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/68d6680d426674d5a974e5319e25bcabbfcd4ba121bde7e3f3cff2d3c6f0c534 [none]
+[debug] [2026-01-26T08:57:40.095Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/68d6680d426674d5a974e5319e25bcabbfcd4ba121bde7e3f3cff2d3c6f0c534 [stream]
+[debug] [2026-01-26T08:57:40.096Z] [hosting][populate queue][FINAL] {"max":397,"min":397,"avg":397,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":411}
+[debug] [2026-01-26T08:57:40.096Z] [hosting] uploads queued: 14
+[debug] [2026-01-26T08:57:41.459Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/dc68e3424db3af8dcd7e7a9dd5fe8cf5b3457eeffee6a8470a362e932c632a55 200
+[debug] [2026-01-26T08:57:41.459Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/dc68e3424db3af8dcd7e7a9dd5fe8cf5b3457eeffee6a8470a362e932c632a55 [stream]
+[debug] [2026-01-26T08:57:41.460Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/27edce7be5922cf0bef7d4136f69b5bfbdd5bf8c13c7b026f71187d41a00aa7d 200
+[debug] [2026-01-26T08:57:41.460Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/27edce7be5922cf0bef7d4136f69b5bfbdd5bf8c13c7b026f71187d41a00aa7d [stream]
+[debug] [2026-01-26T08:57:41.496Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/07fb57f5bd4b31f90149fbf2b920501769941bd84ff9bbffef60d9b8bc0c6b44 200
+[debug] [2026-01-26T08:57:41.497Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/07fb57f5bd4b31f90149fbf2b920501769941bd84ff9bbffef60d9b8bc0c6b44 [stream]
+[debug] [2026-01-26T08:57:41.501Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/212b102aa09e51b3b3e06647e81f7801a61333e171f6582e8124379aabccb41d 200
+[debug] [2026-01-26T08:57:41.501Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/212b102aa09e51b3b3e06647e81f7801a61333e171f6582e8124379aabccb41d [stream]
+[debug] [2026-01-26T08:57:41.506Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/79e2b749561016bc8af300ea19f48347ceed3cb1a54f48ae456172eca45e08f0 200
+[debug] [2026-01-26T08:57:41.507Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/79e2b749561016bc8af300ea19f48347ceed3cb1a54f48ae456172eca45e08f0 [stream]
+[debug] [2026-01-26T08:57:41.509Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49 200
+[debug] [2026-01-26T08:57:41.509Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49 [stream]
+[debug] [2026-01-26T08:57:41.539Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/ee04fb47e525c67d8424ffe9b4d8a8a24e434504478afca4e0ca602146836d4c 200
+[debug] [2026-01-26T08:57:41.540Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/ee04fb47e525c67d8424ffe9b4d8a8a24e434504478afca4e0ca602146836d4c [stream]
+[debug] [2026-01-26T08:57:41.554Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/68d6680d426674d5a974e5319e25bcabbfcd4ba121bde7e3f3cff2d3c6f0c534 200
+[debug] [2026-01-26T08:57:41.554Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/68d6680d426674d5a974e5319e25bcabbfcd4ba121bde7e3f3cff2d3c6f0c534 [stream]
+[debug] [2026-01-26T08:57:41.724Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/d585570cd20d3a07c8ec3b26afcb3029c3ec477dbf95f7066337f3080baa7707 200
+[debug] [2026-01-26T08:57:41.725Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/d585570cd20d3a07c8ec3b26afcb3029c3ec477dbf95f7066337f3080baa7707 [stream]
+[debug] [2026-01-26T08:57:41.746Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/116b2d46f90bdecbe0630b6f655804a4ae09658bd2ebf96f0ff9401136568ec9 200
+[debug] [2026-01-26T08:57:41.746Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/116b2d46f90bdecbe0630b6f655804a4ae09658bd2ebf96f0ff9401136568ec9 [stream]
+[debug] [2026-01-26T08:57:41.849Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/e044e47efb2290de11524a318846873215f5bf0a82bcf1be569907705bf92387 200
+[debug] [2026-01-26T08:57:41.849Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/e044e47efb2290de11524a318846873215f5bf0a82bcf1be569907705bf92387 [stream]
+[debug] [2026-01-26T08:57:41.861Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/cb5f30471c643f874358f8ac0ac6403cf9c29ea2fc170565771f78870c0d70e5 200
+[debug] [2026-01-26T08:57:41.861Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/cb5f30471c643f874358f8ac0ac6403cf9c29ea2fc170565771f78870c0d70e5 [stream]
+[debug] [2026-01-26T08:57:41.926Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/e39c14a496e91fb94d57486ae4089c7163e8272a520ac0b88b2c8dff47cf20ba 200
+[debug] [2026-01-26T08:57:41.926Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/e39c14a496e91fb94d57486ae4089c7163e8272a520ac0b88b2c8dff47cf20ba [stream]
+[debug] [2026-01-26T08:57:42.026Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/a69de00224a5fd16ef1785f557f9a316f2ce440d32ece8c6dfe59d775550df6c 200
+[debug] [2026-01-26T08:57:42.026Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-59bef/versions/783025862a48f5a5/files/a69de00224a5fd16ef1785f557f9a316f2ce440d32ece8c6dfe59d775550df6c [stream]
+[debug] [2026-01-26T08:57:42.026Z] [hosting][upload queue][FINAL] {"max":1947,"min":1378,"avg":1574.357142857143,"active":0,"complete":14,"success":14,"errored":0,"retried":0,"total":14,"elapsed":1948}
+[info] +  hosting[netflixgpt-59bef]: file upload complete 
+[debug] [2026-01-26T08:57:42.028Z] [hosting] deploy completed after 2521ms
+[debug] [2026-01-26T08:57:42.028Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "netflixgpt-59bef"
+    },
+    "version": "projects/1050999783555/sites/netflixgpt-59bef/versions/783025862a48f5a5"
+  }
+]
+[info] i  hosting[netflixgpt-59bef]: finalizing version... 
+[debug] [2026-01-26T08:57:42.029Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:42.029Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:42.030Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflixgpt-59bef/versions/783025862a48f5a5 updateMask=status%2Cconfig
+[debug] [2026-01-26T08:57:42.030Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflixgpt-59bef/versions/783025862a48f5a5 {"status":"FINALIZED","config":{}}
+[debug] [2026-01-26T08:57:42.359Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflixgpt-59bef/versions/783025862a48f5a5 200
+[debug] [2026-01-26T08:57:42.359Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflixgpt-59bef/versions/783025862a48f5a5 {"name":"projects/1050999783555/sites/netflixgpt-59bef/versions/783025862a48f5a5","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-01-26T08:57:26.365798Z","createUser":{"email":"prashanthkhiremat@gmail.com"},"finalizeTime":"2026-01-26T08:57:29.893061Z","finalizeUser":{"email":"prashanthkhiremat@gmail.com"}}
+[debug] [2026-01-26T08:57:42.359Z] [hosting] finalized version for netflixgpt-59bef:[object Object]
+[info] +  hosting[netflixgpt-59bef]: version finalized 
+[info] i  hosting[netflixgpt-59bef]: releasing new version... 
+[debug] [2026-01-26T08:57:42.359Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:42.359Z] Checked if tokens are valid: true, expires at: 1769421196694
+[debug] [2026-01-26T08:57:42.360Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflixgpt-59bef/channels/live/releases versionName=projects%2F1050999783555%2Fsites%2Fnetflixgpt-59bef%2Fversions%2F783025862a48f5a5
+[debug] [2026-01-26T08:57:42.360Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflixgpt-59bef/channels/live/releases {}
+[debug] [2026-01-26T08:57:42.792Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflixgpt-59bef/channels/live/releases 200
+[debug] [2026-01-26T08:57:42.792Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflixgpt-59bef/channels/live/releases {"name":"projects/1050999783555/sites/netflixgpt-59bef/channels/live/releases/1769417849769000","version":{"name":"projects/1050999783555/sites/netflixgpt-59bef/versions/783025862a48f5a5","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-01-26T08:57:26.365798Z","createUser":{"email":"prashanthkhiremat@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKOejL2mYdh8_3ukt0R4_mlJeyWlYxiLUvHVvliXFEEWegh4Bs=mo"},"finalizeTime":"2026-01-26T08:57:29.893061Z","finalizeUser":{"email":"prashanthkhiremat@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKOejL2mYdh8_3ukt0R4_mlJeyWlYxiLUvHVvliXFEEWegh4Bs=mo"}},"type":"DEPLOY","releaseTime":"2026-01-26T08:57:29.769Z","releaseUser":{"email":"prashanthkhiremat@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKOejL2mYdh8_3ukt0R4_mlJeyWlYxiLUvHVvliXFEEWegh4Bs=mo"}}
+[debug] [2026-01-26T08:57:42.792Z] [hosting] release: {"name":"projects/1050999783555/sites/netflixgpt-59bef/channels/live/releases/1769417849769000","version":{"name":"projects/1050999783555/sites/netflixgpt-59bef/versions/783025862a48f5a5","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-01-26T08:57:26.365798Z","createUser":{"email":"prashanthkhiremat@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKOejL2mYdh8_3ukt0R4_mlJeyWlYxiLUvHVvliXFEEWegh4Bs=mo"},"finalizeTime":"2026-01-26T08:57:29.893061Z","finalizeUser":{"email":"prashanthkhiremat@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKOejL2mYdh8_3ukt0R4_mlJeyWlYxiLUvHVvliXFEEWegh4Bs=mo"}},"type":"DEPLOY","releaseTime":"2026-01-26T08:57:29.769Z","releaseUser":{"email":"prashanthkhiremat@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKOejL2mYdh8_3ukt0R4_mlJeyWlYxiLUvHVvliXFEEWegh4Bs=mo"}}
+[info] +  hosting[netflixgpt-59bef]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/netflixgpt-59bef/overview
+[info] Hosting URL: https://netflixgpt-59bef.web.app
+[debug] [2026-01-26T08:57:47.936Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\u55664\AppData\Local\nvm\v20.19.4\node_modules\firebase-tools\lib\utils.js:308:49)
+    at listOnTimeout (node:internal/timers:581:17)
+    at process.processTimers (node:internal/timers:519:7)
+[error] 
+[error] Error: An unexpected error has occurred.
