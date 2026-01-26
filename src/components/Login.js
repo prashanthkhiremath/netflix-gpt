@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { updateProfile } from "firebase/auth";
 import { useDispatch } from 'react-redux';
 import { addUser } from "../utils/userSlice"
+import { USER_AVATAR } from '../utils/constants';
 
 const Login = () => {
 
@@ -36,15 +37,19 @@ const Login = () => {
         // Signed up 
         const user = userCredential.user;
         updateProfile(user, {
-          displayName: name.current.value, photoURL: "https://avatars.githubusercontent.com/u/31027310?s=400&u=027f71f0724f21e40003369673433bdd7b0a21e5&v=4"
+          displayName: name.current.value, photoURL: USER_AVATAR
         }).then(() => {
           const {uid, email, displayName, photoURL} = auth.currentUser;
-          dispatch(addUser({uid: uid, email: email, displayName: displayName, photoURL: photoURL}));
-          navigate("/browse");
+          dispatch(
+            addUser(
+              {
+                uid: uid, email: email, displayName: displayName, photoURL: photoURL
+              }
+            )
+          );
         }).catch((error) => {
           setErrorMessage(error.message);
         });
-        console.log(user);
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -57,7 +62,6 @@ const Login = () => {
       .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
-        console.log(user);
         navigate("/browse");
       })
       .catch((error) => {
@@ -69,45 +73,65 @@ const Login = () => {
     
   }
   return (
-    <div>
+    <div className='relative h-screen w-screen overflow-hidden'>
         <Header/>
-        <div className='absolute'>
+        
+        <div className='fixed inset-0 -z-10'>
             <img
-             src="https://assets.nflxext.com/ffe/siteui/vlv3/3d31dac6-aaf0-4e6e-8bd7-e16c5d9cd9a3/web/IN-en-20260119-TRIFECTA-perspective_cce70d60-69c5-428f-99cf-44c212fcec3f_large.jpg"
-             alt="logo"
+              className='w-full h-full object-cover'
+              src="https://assets.nflxext.com/ffe/siteui/vlv3/3d31dac6-aaf0-4e6e-8bd7-e16c5d9cd9a3/web/IN-en-20260119-TRIFECTA-perspective_cce70d60-69c5-428f-99cf-44c212fcec3f_large.jpg"
+              alt="background"
             />
         </div>
+
+        {/* FIXED: Reduced width to w-[380px]
+            Reduced padding to p-10
+        */}
         <form
-          onSubmit={(e) => e.preventDefault() } 
-          className='w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-80'>
-        <h1 className='font-bold text-3xl py-4'>{isSignInForm ? "Sign In" : "Sign Up"}</h1>
+          onSubmit={(e) => e.preventDefault()} 
+          className='w-[380px] fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-10 bg-black text-white rounded-md bg-opacity-85 z-20'>
+          
+          <h1 className='font-bold text-3xl mb-6'>
+            {isSignInForm ? "Sign In" : "Sign Up"}
+          </h1>
+          
           {!isSignInForm && (  
             <input
               ref={name} 
               type="text" 
               placeholder='Full Name' 
-              className='p-4 my-4 w-full bg-gray-700'/>
+              className='p-3 mb-4 w-full bg-gray-700 rounded-sm outline-none text-sm'/>
           )}
+          
           <input
             ref={email}
             type="text" 
             placeholder='Email Address' 
-            className='p-4 my-4 w-full bg-gray-700'/>
+            className='p-3 mb-4 w-full bg-gray-700 rounded-sm outline-none text-sm'/>
+            
           <input 
             ref={password}
             type="password" 
             placeholder='Password' 
-            className='p-4 my-4 w-full bg-gray-700' />
+            className='p-3 mb-4 w-full bg-gray-700 rounded-sm outline-none text-sm' />
+            
           <button 
-            className='py-4 my-6 bg-red-700 w-full rounded-lg'
+            className='py-3 mt-4 bg-red-700 w-full rounded-md font-bold'
             onClick={handleButtonClick}>
             {isSignInForm ? "Sign In" : "Sign Up"}
           </button>
-          <p className='text-red-500 font-bold text-lg py-2'>{errorMessage}</p>
-          <p className='py-4 cursor-pointer' onClick={toggleSignInForm}>
-            {isSignInForm 
-              ? "New to Netflix? Sign Up Now" 
-              : "Already registered? Sign In Now"}
+          
+          {errorMessage && (
+            <p className='text-red-500 font-semibold text-xs pt-4'>{errorMessage}</p>
+          )}
+          
+          <p className='mt-8 text-sm text-gray-400'>
+            {isSignInForm ? "New to Netflix?" : "Already registered?"} 
+            <span 
+               className='text-white ml-1 cursor-pointer hover:underline font-medium' 
+               onClick={toggleSignInForm}>
+               {isSignInForm ? "Sign Up Now" : "Sign In Now"}
+            </span>
           </p>
         </form>
     </div>
