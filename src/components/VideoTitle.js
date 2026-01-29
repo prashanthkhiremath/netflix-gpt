@@ -8,11 +8,15 @@ const VideoTitle = ({title,overview}) => {
             {overview}
         </p>
         <div className="flex gap-4 mt-8">
-            <button className="bg-white text-black py-2 px-10 text-xl font-bold rounded-md hover:bg-opacity-80 transition">
-            ▶️ Play
+            {/* Play Button */}
+            <button className="flex items-center bg-white text-black py-2 px-8 text-xl font-bold rounded-md transition-all duration-200 hover:bg-opacity-80 hover:scale-105 active:scale-95 shadow-lg">
+                <span className="text-2xl mr-2 transform rotate-90 leading-none">▲</span> 
+                Play
             </button>
-            <button className="bg-gray-500/50 text-white py-2 px-10 text-xl font-bold rounded-md hover:bg-gray-600 transition backdrop-blur-sm">
-            ℹ️ More Info
+
+            {/* More Info Button */}
+            <button className="flex items-center bg-gray-500/70 text-white py-2 px-8 text-xl font-bold rounded-md transition-all duration-200 backdrop-blur-md">
+                More Info
             </button>
         </div>
     </div>

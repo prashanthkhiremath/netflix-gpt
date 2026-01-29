@@ -38,21 +38,41 @@ function Header() {
     return() => unsubscribe();
   }, [])
   return (
-    <div className='fixed w-screen px-8 py-2 bg-gradient-to-b from-black z-50 flex justify-between'>
+    <div className='fixed w-screen px-8 py-2 bg-gradient-to-b from-black z-50 flex justify-between items-center'>
       <img 
-        className='w-44'
+        className='w-44 cursor-pointer'
         src={LOGO}
-        alt="logo"/>   
+        alt="logo"
+      />   
+
       {user && (
-        <div className='flex p-2'>
-          <img
-            className='w-12 h-12' 
-            alt="usericon"
-            src={user?.photoURL} 
-          />
-          <button 
-            onClick={handleSignOut}
-            className='font-bold text-white'>(Sign Out)</button>
+        <div className='flex items-center group relative p-2'>
+          {/* User Avatar Section */}
+          <div className="flex items-center cursor-pointer">
+            <img
+              className='w-10 h-10 rounded-md' 
+              alt="usericon"
+              src={user?.photoURL} 
+            />
+            <span className="text-white ml-2 transition-transform group-hover:rotate-180 duration-300 text-[10px]">
+              ▼
+            </span>
+          </div>
+
+          {/* Simplified Dropdown - Shows only Sign Out */}
+          <div className='absolute top-14 right-0 bg-black/90 border border-gray-800 w-36 hidden group-hover:block transition-all shadow-xl rounded-sm'>
+            
+            {/* Invisible bridge to prevent menu from closing when moving mouse */}
+            <div className="absolute -top-4 w-full h-4"></div>
+
+            <div className="p-4 text-center">
+              <button 
+                onClick={handleSignOut}
+                className='text-white text-sm font-medium hover:underline w-full'>
+                Sign Out
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </div>
